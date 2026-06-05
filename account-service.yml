@@ -4,7 +4,7 @@ spring:
   
   data:
     mongodb:
-      database: accounts
+      database: account_service_db
 
 server:
   port: 8082
