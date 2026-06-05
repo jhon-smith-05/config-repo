@@ -1,10 +1,27 @@
-server:
-  port: 8083
-
 spring:
+  application:
+    name: credit-service
+  
   data:
     mongodb:
-      uri: mongodb://localhost:27017/credit_service_db
+      database: credits
+
+server:
+  port: 8082
+
+business:
+  rules:
+    credit-limits:
+      personal-loan: 10000.00
+      business-loan: 50000.00
+      personal-credit-card: 5000.00
+      business-credit-card: 20000.00
+    
+    interest-rates:
+      personal-loan: 0.15
+      business-loan: 0.12
+      personal-credit-card: 0.25
+      business-credit-card: 0.22
 
 logging:
   level:

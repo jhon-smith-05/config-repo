@@ -1,14 +1,25 @@
+spring:
+  application:
+    name: account-service
+  
+  data:
+    mongodb:
+      database: accounts
+
 server:
   port: 8082
 
-spring:
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/account_service_db
-
-bank:
-  account:
-    savings-monthly-movement-limit: 20
+business:
+  rules:
+    savings:
+      monthly-movement-limit: 5
+      maintenance-fee: 0
+    checking:
+      monthly-movement-limit: 20
+      maintenance-fee: 10.00
+    fixed-term:
+      monthly-movement-limit: 1
+      allowed-movement-day: 15
 
 logging:
   level:

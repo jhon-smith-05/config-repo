@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://mongodb-prod:27017/customers_prod
+
+logging:
+  level:
+    com.bank.customerservice: INFO
+
+business:
+  rules:
+    max-customers-per-day: 50

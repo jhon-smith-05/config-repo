@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/customers_dev
+
+logging:
+  level:
+    com.bank.customerservice: DEBUG
+
+business:
+  rules:
+    max-customers-per-day: 1000
+
