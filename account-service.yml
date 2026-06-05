@@ -1,0 +1,16 @@
+server:
+  port: 8082
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/account_service_db
+
+bank:
+  account:
+    savings-monthly-movement-limit: 20
+
+logging:
+  level:
+    root: INFO
+    com.bank.accountservice: DEBUG
