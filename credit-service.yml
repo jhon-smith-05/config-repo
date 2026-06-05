@@ -4,10 +4,10 @@ spring:
   
   data:
     mongodb:
-      database: credits
+      database: credit_service_db
 
 server:
-  port: 8082
+  port: 8083
 
 business:
   rules:
