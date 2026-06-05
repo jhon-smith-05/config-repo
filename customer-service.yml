@@ -5,6 +5,23 @@ spring:
   data:
     mongodb:
       database: customer_service_db
+      
+  cloud:
+    stream:
+      bindings:
+        banking-notifications-out-0:
+          destination: banking-notifications
+          content-type: application/json
+        audit-events-out-0:
+          destination: audit-events
+          content-type: application/json
+        fraud-alerts-out-0:
+          destination: fraud-alerts
+          content-type: application/json
+      kafka:
+        binder:
+          brokers: localhost:9092
+          auto-create-topics: true
 
 server:
   port: 8081
