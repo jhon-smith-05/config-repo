@@ -38,6 +38,14 @@ business:
       monthly-movement-limit: 1
       allowed-movement-day: 15
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-user:eureka-password@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+
 logging:
   level:
     root: INFO
